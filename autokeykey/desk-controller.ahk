@@ -41,12 +41,19 @@ If WinExist("ahk_exe Floorp.exe")  {
 
 +F24:: ; Default window position large
 WinGetPos,,, Width, Height, A
-WinMove, A, , 1242, 0, 2587, 1410
+WinMove, A,, 1242, 0, 2587, 1410
 return 
 
-!F2:: ; Default window position small
-WinGetPos,,, Width, Height, A
-CenterX := (A_ScreenWidth - Width) / 2
-HalfHeightY := A_ScreenHeight / 1.5
-WinMove, A, , CenterX, HalfHeightY, Width, A_ScreenHeight // 2
-return 
+; Expand Window Top to Bottom
+!F16::
+WinGetPos, X, Y, W, H, A
+WinMove, A,,X,0,1410,1410
+return
+
+; Shrink Window Small to Middle
++F20::
+WinGetPos, X, Y, W, H, A
+CenterX := (A_ScreenWidth - 1277) / 2  ; Replace 1277 with your desired width
+HalfHeightY := (A_ScreenHeight - 712) / 2
+WinMove, A, , CenterX, HalfHeightY, 1277, 712 
+return
