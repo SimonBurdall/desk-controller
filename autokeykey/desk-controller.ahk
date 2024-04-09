@@ -58,6 +58,11 @@ HalfHeightY := (A_ScreenHeight - 712) / 2
 WinMove, A, , CenterX, HalfHeightY, 1277, 712 
 return
 
+; Open Task View 
+^up::
+send, #{Tab}
+return
+
 ; # Movement Based ################
 ; Expand left
 !F15::
