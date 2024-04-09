@@ -10,12 +10,14 @@ SetWorkingDir %A_ScriptDir%
 
 ; ## Quick Launchers #############
 +F15:: ; Mute Discord or any App
-send, ^+M
+If WinExist("ahk_exe Discord.exe")  {
+    send, ^+M
+}
 return
 
-Alt & F18:: ; Open the terminal. 
-Run, C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.19.10573.0_x64__8wekyb3d8bbwe\wt.exe
-return
+;Alt & F18:: ; Open the terminal. 
+;Run, 
+;return
 
 Alt & F14:: 
 Process, Exist, floorp.exe 
@@ -31,31 +33,38 @@ return
 
 ; ## Windows Management ###########
 ; # Default Management ############
+MoveWindow(WinTitle, X, Y, W, H) {
+  If WinExist("ahk_exe " . WinTitle) {
+    WinMove, ahk_exe %WinTitle%, , %X%, %Y%, %W%, %H%
+  }
+}
+
 +F22:: ; Default Layout
-If WinExist("ahk_exe Discord.exe")  {
-    WinMove, ahk_exe Discord.exe,, 0, 0, 1242, 1415
-}
-If WinExist("ahk_exe Floorp.exe")  { 
-    WinMove, ahk_exe Floorp.exe,, 1242, 0, 2587, 1415
-}
+MoveWindow("Floorp.exe", 1273, 0, 2570, 1415)
+MoveWindow("Discord.exe", 0, 0, 1278, 1415)
+MoveWindow("sublime_text.exe", 0, 0, 1278, 1415)
+MoveWindow("TogglTrack.exe", 3839, 0, 427, 705)
+MoveWindow("KeePassXC.exe", 4259, 0, 868, 712)
+MoveWindow("steamwebhelper.exe", 3839, 705, 1281, 705)
+return
 
 +F24:: ; Default Window position 
 WinGetPos,,, Width, Height, A
-WinMove, A,, 1242, 0, 2587, 1415
+WinMove, A,, 1273, 0, 2570, 1415
 return 
 
 ; Resize Window 3 Col Tall
 !F16::
 WinGetPos, X, Y, W, H, A
-WinMove, A,,X,0,1415,1415
+WinMove, A,,X,0,1278,1415
 return
 
 ; Resize Window Small
 +F20::
 WinGetPos, X, Y, W, H, A
-CenterX := (A_ScreenWidth - 1277) / 2  
+CenterX := (A_ScreenWidth - 1721) / 2  
 HalfHeightY := (A_ScreenHeight - 712) / 2
-WinMove, A, , CenterX, HalfHeightY, 1277, 712 
+WinMove, A, , CenterX, HalfHeightY, 1721, 712 
 return
 
 ; Open Task View 
@@ -67,37 +76,37 @@ return
 ; Expand left
 !F15::
 WinGetPos, X, Y, W, H, A
-WinMove, A,,X-200,Y,W+200,H
+WinMove, A,,X-426,Y,W+426,H
 return
 
 ; Move left
 +F23::
 WinGetPos, X, Y, W, H, A
-WinMove, A,,X-200,Y,W,H
+WinMove, A,,X-426,Y,W,H
 return
 
 ; Compress left
 +F21::
 WinGetPos, X, Y, W, H, A
-WinMove, A,,X+200,Y,W-200,H
+WinMove, A,,X+426,Y,W-426,H
 return
 
 ; Expand right
 !F17::
 WinGetPos, X, Y, W, H, A
-WinMove, A,,X,Y,W+200,H
+WinMove, A,,X,Y,W+426,H
 return
 
 ; Move right
 !F13::
 WinGetPos, X, Y, W, H, A
-WinMove, A,,X+200,Y,W,H
+WinMove, A,,X+426,Y,W,H
 return
 
 ; Compress right
 +F19::
 WinGetPos, X, Y, W, H, A
-WinMove, A,,X,Y,W-200,H
+WinMove, A,,X,Y,W-426,H
 return
 
 ; ## Light & Screen Management ####
