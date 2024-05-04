@@ -4,6 +4,7 @@ While David's setup involves an OLED TV for his monitor, my setup is different. 
 
 Which enables you to utilize a Linux device, I used a Pi Zero 2 W via Ubuntu Server that I have placed inside the back of the monitor, connected via HDMI to any monitor, allowing you to read the hexadecimal registers for the menu. What does this mean? Essentially, you can create an MQTT device that integrates seamlessly with Home Assistant. Openning up possibilities for automating tasks like changing input sources via AutoHotKeys via the same method David did.
 
+
 Additional Hardware (Not Mentioned in David's version):
 EPOMAKER EK21 VIA Gasket Number Pad: Can be found on Amazon, relatively cheap, and is 2.4GHz compatible.
 Pi Zero 2 W: Used for the DDC-MGMT, placed inside the Samsung OdysseyG9.
