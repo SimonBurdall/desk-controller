@@ -1,0 +1,12 @@
+mqtt:
+  username: <Username>
+  password: <User password>
+  host: homeassistant
+  port: 1883
+display:
+  - id: 1
+    inputs:
+      HDMI1: 17
+      DP1: 15
+      DP2: 16
+interval: 20

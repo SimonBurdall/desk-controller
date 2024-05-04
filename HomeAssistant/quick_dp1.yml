@@ -1,0 +1,8 @@
+alias: quick_dp1
+sequence:
+  - type: turn_on
+    device_id: 187e45ed51a6e48a774ad21b02152f73
+    entity_id: 69d38662160a14b422066ae084c973fc
+    domain: switch
+icon: mdi:monitor-screenshot
+mode: single

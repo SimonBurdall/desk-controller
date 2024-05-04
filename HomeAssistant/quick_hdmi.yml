@@ -1,0 +1,8 @@
+alias: quick_hdmi
+sequence:
+  - type: turn_on
+    device_id: 187e45ed51a6e48a774ad21b02152f73
+    entity_id: 75ea2816c8a08666c98ba2ae58565cc8
+    domain: switch
+icon: mdi:monitor-screenshot
+mode: single

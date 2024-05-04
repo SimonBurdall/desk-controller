@@ -1,0 +1,7 @@
+alias: monitor_toggle_pwr
+sequence:
+  - type: toggle
+    device_id: e6af73ba1e547ae544f3e1ca91482ee1
+    entity_id: 0a5cf5fad33104b1ae7e3a745faeee21
+    domain: switch
+mode: single
