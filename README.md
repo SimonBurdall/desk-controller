@@ -1,6 +1,6 @@
 Based on David Zhang's work, check it out on https://github.com/davidz-yt/desk-controller/tree/main
 
-While David's setup involves an OLED TV for his monitor, my setup is different. I rely on a Samsung Odyssey G9 49", which lacks smart capabilities altogether. However, after some research, I stumbled upon MQTT-MGMT by Moimart, available at GitHub.
+While David's setup involves an OLED TV for his monitor, my setup is different. I rely on a Samsung Odyssey G9 49", which lacks smart capabilities altogether. However, after some research, I stumbled upon MQTT-MGMT by Moimart, available at GitHub: https://github.com/moimart/ddc-mqtt
 
 Which enables you to utilize a Linux device connected via HDMI to any monitor, allowing you to read the hexadecimal registers for the menu. I used a Pi Zero 2 W running Ubuntu Server that I have placed inside the back of the monitor. What does this mean? Essentially, you can create an MQTT device that integrates seamlessly with Home Assistant. Openning up possibilities for automating tasks like changing input sources via AutoHotKeys via the same method David did.
 
