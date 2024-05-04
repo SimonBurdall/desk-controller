@@ -41,6 +41,7 @@ MoveWindow(WinTitle, X, Y, W, H) {
 +F22:: ; Default Layout
 MoveWindow("Floorp.exe", 1273, 0, 2570, 1415)
 MoveWindow("Discord.exe", 0, 0, 1278, 1415)
+MoveWindow("Obsidian.exe", 0, 0, 1278, 1415)
 MoveWindow("sublime_text.exe", 0, 0, 1278, 1415)
 MoveWindow("TogglTrack.exe", 3839, 0, 427, 705)
 MoveWindow("KeePassXC.exe", 4259, 0, 868, 712)
